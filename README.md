@@ -22,8 +22,11 @@
 │   └── README.md                      # 개요 및 기술 명세서
 ├── 04_image_captioner/                # 🖼️ [예정] 시나리오 4: 온디바이스 스마트 이미지 갤러리 검색기
 │   └── README.md                      # 개요 및 기술 명세서
-└── 05_style_transformer/              # ✍️ [예정] 시나리오 5: AI 톤앤매너 텍스트 마스터
-    └── README.md                      # 개요 및 기술 명세서
+├── 05_style_transformer/              # ✍️ [예정] 시나리오 5: AI 톤앤매너 텍스트 마스터
+│   └── README.md                      # 개요 및 기술 명세서
+└── 06_jeju_planner/                   # ✈️ [완성] 시나리오 6: AI 제주 여행 여정 설계 플래너 (¡Vamos a Jeju!) (로컬)
+    ├── lib/                           # Jeju Planner Flutter 코드 전체
+    └── pubspec.yaml                   # 의존성 설정
 ```
 
 ---
@@ -78,7 +81,11 @@
 - **핵심 기술**: Few-Shot Prompting 스타일 주입
 - **기능**: 날것의 아이디어 노트를 비즈니스 보고서체, 인스타 감성체 등 사용자가 원하는 5개 이상의 스타일로 즉각 변환 및 다국어 요약합니다.
 
---- 완료(26.6)
+### [06. ¡Vamos a Jeju! AI Planner (로컬)](06_jeju_planner/README.md)
+- **핵심 기술**: 로컬 온디바이스 LLM (Ollama gemma4:e2b) 및 하이브리드 API 연동, 지리적 TSP Heuristic 경로 최적화 및 카카오맵 외부 런처 연동
+- **기능**: 사용자의 동행인, 기간, 스타일, 선호 권역, 특수 요구사항을 바탕으로 제주 100대 명소 DB에서 코스를 추출하고, 권역별 동선 정리 및 카카오맵 길찾기를 자동 연동합니다.
+
+---
 
 ## 🛡️ License & Contact
 - **Author**: seungyongchoi
