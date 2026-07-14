@@ -1,6 +1,6 @@
 # Gemma 4 + Flutter Integration Scenarios 🚀
 
-이 저장소는 구글의 차세대 오픈 가중치 언어 모델인 **Gemma 4**를 크로스플랫폼 프레임워크인 **Flutter**와 결합하여 모바일, 데스크톱 환경에서 구현할 수 있는 5가지 초/중급 실무 시나리오를 제공합니다.
+이 저장소는 구글의 차세대 오픈 가중치 언어 모델인 **Gemma 4**를 크로스플랫폼 프레임워크인 **Flutter**와 결합하여 모바일, 데스크톱 환경에서 구현할 수 있는 7가지 초/중급 실무 시나리오를 제공합니다.
 
 저장소 구조는 사용자가 한 번에 클론하여 개별 시나리오의 코드 구조를 독립적으로 분석하고 나란히 학습할 수 있도록 **폴더별(Folder-based) 아키텍처**로 구성되어 있습니다.
 
@@ -24,9 +24,11 @@
 │   └── README.md                      # 개요 및 기술 명세서
 ├── 05_style_transformer/              # ✍️ [예정] 시나리오 5: AI 톤앤매너 텍스트 마스터
 │   └── README.md                      # 개요 및 기술 명세서
-└── 06_jeju_planner/                   # ✈️ [완성] 시나리오 6: AI 제주 여행 여정 설계 플래너 (¡Vamos a Jeju!) (로컬)
-    ├── lib/                           # Jeju Planner Flutter 코드 전체
-    └── pubspec.yaml                   # 의존성 설정
+├── 06_jeju_planner/                   # ✈️ [완성] 시나리오 6: AI 제주 여행 여정 설계 플래너 (¡Vamos a Jeju!) (로컬)
+│   ├── lib/                           # Jeju Planner Flutter 코드 전체
+│   └── pubspec.yaml                   # 의존성 설정
+└── 07_rag_finetuning/                 # 🧠 [예정] 시나리오 7: RAG & FineTuning 통합 지식 어시스턴트
+    └── README.md                      # 개요 및 기술 명세서
 ```
 
 ---
@@ -63,7 +65,7 @@
 
 ---
 
-## 📅 후속 연동 시나리오 (02 ~ 05) 요약
+## 📅 후속 연동 시나리오 (02 ~ 07) 요약
 
 ### [02. 자연어 일정 추출 및 스마트 비서](02_calendar_agent/README.md)
 - **핵심 기술**: LLM Tool Calling (Function Calling)
@@ -84,6 +86,10 @@
 ### [06. ¡Vamos a Jeju! AI Planner (로컬)](06_jeju_planner/README.md)
 - **핵심 기술**: 로컬 온디바이스 LLM (Ollama gemma4:e2b) 및 하이브리드 API 연동, 지리적 TSP Heuristic 경로 최적화 및 카카오맵 외부 런처 연동
 - **기능**: 사용자의 동행인, 기간, 스타일, 선호 권역, 특수 요구사항을 바탕으로 제주 100대 명소 DB에서 코스를 추출하고, 권역별 동선 정리 및 카카오맵 길찾기를 자동 연동합니다.
+
+### [07. RAG & FineTuning 통합 지식 어시스턴트](07_rag_finetuning/README.md)
+- **핵심 기술**: RAG (Retrieval-Augmented Generation), 벡터 데이터베이스 (Chroma/FAISS), LoRA 기반 FineTuning, 온디바이스 임베딩 모델
+- **기능**: 사용자 문서(PDF/TXT/MD)를 벡터화하여 시맨틱 검색을 수행하고, 관련 컨텍스트와 함께 Gemma 4에 전달하여 정확한 답변을 생성합니다. 또한 도메인 특화 데이터셋으로 모델을 파인튜닝하여 전문성을 향상시키고, 두 기술을 결합한 하이브리드 모드를 제공합니다.
 
 ---
 
